@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="19" type="RubyRunConfigurationType" factoryName="Ruby">
+    <module name="s4t-utils" />
+    <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e STDOUT.sync=true;STDERR.sync=true;load($0=ARGV.shift)" />
+    <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="" />
+    <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
+    <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="Ruby SDK 1.9.1 (C:\Ruby19\bin\ruby.exe)" />
+    <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+    <envs />
+    <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="C:/Ruby19/bin/ruby.exe" />
+    <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+    <method />
+  </configuration>
+</component>

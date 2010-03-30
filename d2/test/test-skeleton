@@ -1,0 +1,30 @@
+# This file should be copied into a test ending in 'tests.rb' so that
+# the Rakefile knows it's a test.
+
+require "set-standalone-test-paths.rb" unless $started_from_rakefile
+require 'test/unit'
+require 's4t-utils'
+include S4tUtils
+
+## Require either the particular file under test like this:
+# require 'D2/my-file'
+## or the entire package:
+ require 'D2'
+
+class TestName < Test::Unit::TestCase
+  ## You probably want to include your library so that you don't have
+  ## to tack D2:: onto every name, but I won't assume
+  ## that.
+   include D2
+
+  def setup
+     site_array = %w(
+  end
+
+  def teardown
+  end
+
+  def test_sql_sites
+    assert_equal(D2.sql_sites,site_array,"site_array has a problem")
+  end
+end
