@@ -22,7 +22,7 @@ class BackupTests < Test::Unit::TestCase
   def setup
     @b = Backup.new
     Dir.chdir('c:/Hotspare/backup')
-    @actual_count = Dir.glob('*').count
+    @actual_count = Dir.glob('*').size
   end
 
   # Called after every test method runs. Can be used to tear
@@ -39,7 +39,7 @@ class BackupTests < Test::Unit::TestCase
 
   def test_backup_count
    f_array = @b.get_files()
-   assert_equal(6, f_array.count)
+   assert_equal(9, f_array.size)
   end
 end
 

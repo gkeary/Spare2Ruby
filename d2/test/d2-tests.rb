@@ -9,26 +9,26 @@ include S4tUtils
 ## Require either the particular file under test like this:
 # require 'D2/my-file'
 ## or the entire package:
- require 'D2'
- require 'bin/user'
+require 'D2'
+require 'bin/user'
 
 ##
-## primary purpose is to test D2 mixins
+## primary purpose is to test D2 mix ins
 ## TODO: provide some user tests
 ## TODO: provide some user functionality
-class UserTests < Test::Unit::TestCase
+class D2Tests < Test::Unit::TestCase
   ## You probably want to include your library so that you don't have
   ## to tack D2:: onto every name, but I won't assume
   ## that.
-   include D2
+  include D2
 
   def setup
-     @db_script_array = "#{CONFIGS}NH/DBSCRIPTS",
-                  "#{CONFIGS}MA/DBSCRIPTS",
-                  "#{CONFIGS}CT/DBSCRIPTS",
-                  "#{CONFIGS}VT/DBSCRIPTS",
-                  "#{CONFIGS}ME/DBSCRIPTS"
-     @u= User.new()
+    @db_script_array = "#{CONFIGS}NH/DBSCRIPTS",
+            "#{CONFIGS}MA/DBSCRIPTS",
+            "#{CONFIGS}CT/DBSCRIPTS",
+            "#{CONFIGS}VT/DBSCRIPTS",
+            "#{CONFIGS}ME/DBSCRIPTS"
+    @u= User.new()
 
 
   end
@@ -41,10 +41,11 @@ class UserTests < Test::Unit::TestCase
     # this means you can still use an empty constructor...
     # so let's see if you can assign some attributes after using the vanilla constructor...
 
-    @u[:user]='rgk'
-    puts @u.inspect
-    puts @db_script_array
-    puts @u.sql_sites
-    assert_equal(@db_script_array, @u.sql_sites,"site_array has a problem")
-  end                           
+    #@u.user='rgk'
+    #puts @u.inspect
+    # puts @db_script_array
+    # puts @u.sql_sites
+
+    assert_equal(@db_script_array, @u.sql_sites, "site_array has a problem")
+  end
 end
